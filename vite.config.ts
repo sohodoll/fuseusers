@@ -1,13 +1,13 @@
-import { AliasOptions, defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { AliasOptions, defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-import path from 'path';
+import path from 'path'
 
 const getAlias = (aliases: string[]): AliasOptions =>
   aliases.map((alias) => ({
     find: alias,
     replacement: path.resolve(__dirname, 'src', alias),
-  }));
+  }))
 
 const alias: AliasOptions = getAlias([
   'assets',
@@ -17,13 +17,14 @@ const alias: AliasOptions = getAlias([
   'enums',
   'forms',
   'helpers',
+  'store',
   'interfaces',
   'pages',
   'router',
   'types',
   'utils',
   'mocks',
-]);
+])
 
 export default defineConfig({
   plugins: [react()],
@@ -31,4 +32,4 @@ export default defineConfig({
     alias,
   },
   appType: 'spa',
-});
+})

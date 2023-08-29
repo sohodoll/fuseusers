@@ -1,7 +1,17 @@
-import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import 'assets/styles/App.css'
+import { SearchPage } from 'pages'
 
-function App() {
-  return <h1 className="mt-10">Hello, World!</h1>
+const App = () => {
+  return (
+    <BrowserRouter>
+      <main>
+        <Routes>
+          <Route path="/" element={<SearchPage />} />
+        </Routes>
+      </main>
+    </BrowserRouter>
+  )
 }
 
 export default App
