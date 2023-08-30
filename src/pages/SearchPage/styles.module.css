@@ -2,15 +2,76 @@
   margin-top: 20px;
 }
 
+.searchInputWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.searchTotalCount {
+  margin-top: 2rem;
+  text-align: center;
+}
+
 .searchInput {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  padding: 1rem;
+  padding: 0.8rem;
+  flex-basis: 50%;
   font-weight: 600;
+  color: var(--color-primary);
   border-radius: 1px;
   outline: none;
 }
 
 .searchInput::placeholder {
-  color: #64568f;
+  color: var(--color-primary);
+}
+
+.jokesGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1rem;
+  margin-top: 2rem;
+}
+
+.jokeCard {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: space-between;
+  min-height: 7rem;
+  grid-column: span 3;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+.jokesGrid .jokeCard:nth-child(n + 3) {
+  grid-column: span 2;
+}
+
+.jokeData {
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(128, 128, 128, 0.685);
+}
+
+.noJokes {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+/* adaptive styling */
+
+@media only screen and (max-width: 700px) {
+  .jokesGrid .jokeCard:nth-child(n + 3) {
+    grid-column: span 3;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .jokesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

@@ -18,6 +18,7 @@ const alias: AliasOptions = getAlias([
   'forms',
   'helpers',
   'store',
+  'api',
   'interfaces',
   'pages',
   'router',

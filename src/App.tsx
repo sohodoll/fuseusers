@@ -5,11 +5,13 @@ import { SearchPage } from 'pages'
 const App = () => {
   return (
     <BrowserRouter>
-      <main>
-        <Routes>
-          <Route path="/" element={<SearchPage />} />
-        </Routes>
-      </main>
+      <div className="wrapper">
+        <main>
+          <Routes>
+            <Route path="/" element={<SearchPage />} />
+          </Routes>
+        </main>
+      </div>
     </BrowserRouter>
   )
 }
