@@ -20,7 +20,7 @@ export const SearchInput = () => {
 
     const debounceTimeout = setTimeout(() => {
       dispatch(fetchJokesByQuery(query))
-    }, 400)
+    }, 300)
 
     return () => clearTimeout(debounceTimeout)
   }, [query, dispatch])

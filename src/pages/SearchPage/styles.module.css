@@ -64,13 +64,13 @@
 
 /* adaptive styling */
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 950px) {
   .jokesGrid .jokeCard:nth-child(n + 3) {
     grid-column: span 3;
   }
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 680px) {
   .jokesGrid {
     grid-template-columns: repeat(3, 1fr);
   }

@@ -12,3 +12,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     </Provider>
   </React.StrictMode>
 )
+
+if (localStorage.getItem('theme')) {
+  document.documentElement.className = localStorage.getItem('theme') as string
+}
