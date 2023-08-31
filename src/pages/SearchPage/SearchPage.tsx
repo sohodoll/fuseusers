@@ -1,7 +1,7 @@
 import { useAppSelector } from 'store/store'
 import { selectAllJokes } from 'store/features'
 import { MoonIcon, SunIcon } from 'components'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { JokesGrid } from './components/JokesGrid'
 import { SearchInput } from './components/SearchInput'
 import styles from './styles.module.css'
@@ -10,9 +10,9 @@ export const SearchPage = () => {
   const jokes = useAppSelector(selectAllJokes)
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
 
-  const toggleTheme = () => {
+  const toggleTheme = useCallback(() => {
     setTheme(theme === 'light' ? 'dark' : 'light')
-  }
+  }, [theme])
 
   useEffect(() => {
     document.documentElement.className = theme

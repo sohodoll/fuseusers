@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useState } from 'react'
+import { ChangeEvent, useCallback, useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { AppDispatch, useAppSelector } from 'store/store'
 import {
@@ -16,11 +16,14 @@ export const SearchInput = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [query, setQuery] = useState('')
 
-  const onSearchInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setQuery(event.target.value)
-    if (event.target.value.length < 3) return
-    setIsLoading(true)
-  }
+  const onSearchInputChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      setQuery(event.target.value)
+      if (event.target.value.length < 3) return
+      setIsLoading(true)
+    },
+    []
+  )
 
   // handling spinner visibility
   useEffect(() => {
