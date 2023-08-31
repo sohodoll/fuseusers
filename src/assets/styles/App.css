@@ -13,18 +13,15 @@
 body,
 html,
 #root {
-  width: 100%;
-  height: 100%;
   font-family: 'Rubik', sans-serif;
 }
 
 .wrapper {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
 }
 
 .customContainer {
-  height: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 3rem;
