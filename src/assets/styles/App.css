@@ -33,7 +33,7 @@ html,
 /* adaptive styling */
 
 @media only screen and (max-width: 450px) {
-  .wrapper {
-    padding: 0 1rem;
+  .customContainer {
+    padding: 1rem 1rem;
   }
 }

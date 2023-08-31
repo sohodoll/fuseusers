@@ -5,7 +5,7 @@ import { SearchPage } from 'pages'
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="wrapper dark:bg-slate-500">
+      <div className="wrapper dark:bg-slate-700 dark:text-white">
         <div className="customContainer">
           <main>
             <Routes>
