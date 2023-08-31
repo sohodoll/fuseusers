@@ -2,13 +2,19 @@
   margin-top: 20px;
 }
 
+.searchWrapper {
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
 .searchInputWrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .searchTotalCount {
-  margin-top: 2rem;
+  margin-top: 3rem;
   text-align: center;
 }
 
@@ -21,10 +27,17 @@
   color: var(--color-primary);
   border-radius: 1px;
   outline: none;
+  margin-left: 1rem;
 }
 
 .searchInput::placeholder {
   color: var(--color-primary);
+}
+
+.searchSpinner {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 .jokesGrid {
