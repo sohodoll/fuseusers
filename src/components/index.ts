@@ -1,2 +1,2 @@
 export * from './icons'
-export * from './Sinner'
+export * from './Spinner'

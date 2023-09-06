@@ -1,5 +1,5 @@
 import { JokesResponse } from 'types/JokesResponse'
-import { BASE_URL } from './consts'
+import { BASE_URL } from './constants'
 
 export const getJokesByQuery = async (
   query: string

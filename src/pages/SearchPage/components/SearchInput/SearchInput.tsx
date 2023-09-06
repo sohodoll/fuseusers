@@ -33,7 +33,9 @@ export const SearchInput = () => {
   }, [query])
 
   useEffect(() => {
-    if (jokesStatus === 'succeeded') setIsLoading(false)
+    if (jokesStatus === 'succeeded') {
+      setIsLoading(false)
+    }
   }, [jokesStatus])
 
   // using useEffect to send request to API with debounce to avoid sending request on every key press

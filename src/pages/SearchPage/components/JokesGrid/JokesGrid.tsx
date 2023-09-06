@@ -15,9 +15,12 @@ export const JokesGrid: FC<JokesGridProps> = ({ jokes }) => {
       </div>
     )
   }
-  const renderedJokes = jokes.map((joke) => (
-    <JokeCard key={joke.id} joke={joke} />
-  ))
 
-  return <div className={styles.jokesGrid}>{renderedJokes}</div>
+  return (
+    <div className={styles.jokesGrid}>
+      {jokes.map((joke) => (
+        <JokeCard key={joke.id} joke={joke} />
+      ))}
+    </div>
+  )
 }

@@ -1,3 +1,2 @@
-export const formatJokeDate = (date: string) => {
-  return date.split(' ')[0].split('-').join('.')
-}
+export const formatJokeDate = (date: string) =>
+  date.split(' ')[0].split('-').join('.')
