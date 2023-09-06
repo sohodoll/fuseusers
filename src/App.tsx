@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import 'assets/styles/App.css'
+import 'assets/styles/app.css'
 import { SearchPage } from 'pages'
 
 const App = () => {
